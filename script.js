@@ -2,6 +2,9 @@ document.getElementById("currentDay").innerHTML = new Date().toDateString();
 
 checkHour = new Date().getHours() -8;
 
+for(let k = 9; k <= 17; k++){
+    document.getElementById("textarea" + k).innerHTML = localStorage.getItem("textarea"+k)
+}
 
 for(let i = 9; i <= 17; i++){
     if(i < checkHour){
@@ -31,6 +34,6 @@ document.getElementById("saveBtn17").onclick = function() {saveText(17)};
 function saveText(j){
     currentInput = document.getElementById("textarea"+ j).value;
     console.log(currentInput);
-    localStorage.setItem("textArea"+ j, currentInput);
+    localStorage.setItem("textarea"+ j, currentInput);
 
 }
