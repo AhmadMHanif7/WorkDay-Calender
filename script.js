@@ -1,9 +1,9 @@
 document.getElementById("currentDay").innerHTML = new Date().toDateString();
 
-checkHour = new Date().getHours() -8;
+checkHour = new Date().getHours();
 
 for(let k = 9; k <= 17; k++){
-    document.getElementById("textarea" + k).innerHTML = localStorage.getItem("textarea"+k)
+    document.getElementById("textarea" + k).innerHTML = localStorage.getItem("textarea"+k);
 }
 
 for(let i = 9; i <= 17; i++){
